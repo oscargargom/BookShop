@@ -1,1 +1,61 @@
 # TiendaLibros
+
+_Descripcion_
+
+## Pre-requisitos 📋
+
+_Requisitos y como instalarlos._
+
+### PHP 8.1
+Instalación:
+
+1#
+```
+sudo apt update; 
+```
+2#
+```
+sudo apt upgrade
+```
+3#
+```
+sudo apt install ca-certificates apt-transport-https software-properties-common
+```
+4#
+```
+sudo add-apt-repository ppa:ondrej/php
+```
+5#
+```
+sudo apt install php8.1
+```
+
+
+## Comenzando 🚀
+
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+_Clonamos el proyecto_
+```
+git clone https://github.com/Taskillity/taskillity.git
+```
+
+
+## Construido con 🛠️
+
+_Herramientas utilizadas._
+
+* [Bootstrap](https://getbootstrap.com/) - Biblioteca utilizada.
+
+## DESPLIEGUE ==> DESPLEGADA EN HEROKU
+
+
+## Autores ✒️
+
+* **Oscar García Gómez** - [oscargargom](https://github.com/oscargargom) 
+
+
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
