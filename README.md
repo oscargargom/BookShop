@@ -1,6 +1,6 @@
 # TiendaLibros
 
-_Descripcion_
+_Descripción del proyecto_
 
 ## Pre-requisitos 📋
 
