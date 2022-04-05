@@ -37,7 +37,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 _Clonamos el proyecto_
 ```
-git clone https://github.com/Taskillity/taskillity.git
+https://github.com/oscargargom/TiendaLibros.git
 ```
 
 
