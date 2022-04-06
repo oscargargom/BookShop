@@ -19,6 +19,7 @@ class Database{
 
     function connect(){
         try{
+           //Los datos se sustituyen
             $connection = "mysql:host=" . $this->host . ";dbname=" . $this->db . ";charset=" . $this->charset;
             $options = [
                 PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
