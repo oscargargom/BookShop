@@ -45,8 +45,8 @@ https://github.com/oscargargom/TiendaLibros.git
 
 _Herramientas utilizadas._
 
-* [HTML](https://www.w3schools.com/html/) - Lenguaje principal utilizado.
-* [PHP](https://www.php.net/) - Lenguaje principal utilizado.
+* [HTML5](https://www.w3schools.com/html/) - Lenguaje principal utilizado.
+* [PHP 8.1](https://www.php.net/) - Lenguaje principal utilizado.
 * [JavaScript](https://es.wikipedia.org/wiki/JavaScript) - Lenguaje secundario utilizado.
 * [Bootstrap 5.1](https://getbootstrap.com/) - Biblioteca utilizada.
 
