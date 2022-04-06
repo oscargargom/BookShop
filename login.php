@@ -6,7 +6,7 @@ session_start();
 if (isset($_GET['cerrar_sesion'])) {
     session_unset();
 
-    // destruir la sesión 
+    // Para destruir la sesión manualmente, provisional
     session_destroy();
 }
 
@@ -32,6 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     //Almacena la constraseña
     $password = $_POST['password'];
 
+    //Recibe los usuarios de la base de datos (Admin y usuario)
     $db = new Database();
     $query = $db->connect()->prepare('SELECT *FROM usuarios WHERE username = :username AND password = :password');
     $query->execute(['username' => $username, 'password' => $password]);
@@ -54,7 +55,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             default:
         }
     } else {
-        // Si no existe el usuario activa la alerta de bootstrap y añade un string a la variable alerta, para informar de los datos incorrectos
+        // Si no existe el usuario introducido activa la alerta de bootstrap y añade un string a la variable alerta, para informar de los datos incorrectos
         $alerta1 = true;
         $alerta = "Nombre de usuario o contraseña incorrecto";
     }
