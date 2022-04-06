@@ -34,7 +34,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //Recibe los usuarios de la base de datos (Admin y usuario)
     $db = new Database();
-    $query = $db->connect()->prepare('SELECT *FROM usuarios WHERE username = :username AND password = :password');
+    $query = $db->connect()->prepare('SELECT * FROM usuarios WHERE username = :username AND password = :password');
     $query->execute(['username' => $username, 'password' => $password]);
 
     $row = $query->fetch(PDO::FETCH_NUM);
@@ -63,6 +63,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 ?>
 
+<?php
+
+    //Para que el css se vuelva a cargar, provisional
+    header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+    header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -82,18 +90,18 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <h1>Inicia Sesión</h1>
 
         <div class="txtb">
-            <input type="text" name="username">
+            <input type="text" name="username" required>
             <span data-placeholder="Nombre de usuario"></span>
         </div>
 
         <div class="txtb">
-            <input type="password" name="password">
+            <input type="password" name="password" required>
             <span data-placeholder="Contraseña"></span>
         </div>
 
         <input type="submit" class="logbtn" value="Iniciar sesión">
 
-        <div class="bottom-text">
+        <div class="bottom-text" style="font-size: 15px;">
             ¿No tienes cuenta? <a href="register.php">Regístrate</a>
         </div>
 

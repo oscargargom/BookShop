@@ -1,8 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Poppins',sans-serif;
     box-sizing: border-box;
   }
   
@@ -85,6 +84,9 @@
     outline: none;
     cursor: pointer;
     transition: .5s;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
   
   .logbtn:hover{
