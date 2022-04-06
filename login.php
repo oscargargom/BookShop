@@ -6,7 +6,7 @@ session_start();
 if (isset($_GET['cerrar_sesion'])) {
     session_unset();
 
-    // destroy the session 
+    // destruir la sesión 
     session_destroy();
 }
 
