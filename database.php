@@ -8,6 +8,7 @@ class Database{
     private $password;
     private $charset;
 
+    //Introducir los datos de la base de datos
     public function __construct(){
         $this->host = 'dwes.lan';
         $this->db = 'tiendaLibros';
