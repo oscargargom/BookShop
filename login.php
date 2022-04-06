@@ -13,10 +13,12 @@ if (isset($_GET['cerrar_sesion'])) {
 if (isset($_SESSION['rol'])) {
     switch ($_SESSION['rol']) {
         case 1:
+            //Si el id rol es igual a 1 (admin), se envia al usuario a adminIndex.php
             header('location: adminIndex.php');
             break;
 
         case 2:
+            //Si el id rol es igual a 2 (usuario), se envia al usuario a usuaroiIndex.php
             header('location: usuarioIndex.php');
             break;
 
@@ -25,7 +27,9 @@ if (isset($_SESSION['rol'])) {
 }
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
+    //Almacena el usuario
     $username = $_POST['username'];
+    //Almacena la constraseña
     $password = $_POST['password'];
 
     $db = new Database();
@@ -50,7 +54,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             default:
         }
     } else {
-        // no existe el usuario
+        // Si no existe el usuario activa la alerta de bootstrap y añade un string a la variable alerta, para informar de los datos incorrectos
         $alerta1 = true;
         $alerta = "Nombre de usuario o contraseña incorrecto";
     }
