@@ -93,7 +93,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         </div>
 
         <div>
-                 <!-- Comienza Bootstrap alerta datos incorrrectos -->
+            <!-- Comienza Bootstrap alerta datos incorrrectos -->
             <?php if ($alerta1 == true) : ?>
                 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                     <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -110,7 +110,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                     </div>
                 </div>
             <?php endif; ?>
-              <!-- Finaliza Bootstrap alerta datos incorrrectos -->
+            <!-- Finaliza Bootstrap alerta datos incorrrectos -->
         </div>
 
     </form>
@@ -125,8 +125,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $(this).removeClass("focus");
         });
     </script>
-
-
 
 </body>
 
