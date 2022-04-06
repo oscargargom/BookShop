@@ -45,6 +45,9 @@ https://github.com/oscargargom/TiendaLibros.git
 
 _Herramientas utilizadas._
 
+* [HTML](https://www.w3schools.com/html/) - Lenguaje principal utilizado.
+* [PHP](https://www.php.net/) - Lenguaje principal utilizado.
+* [JavaScript](https://es.wikipedia.org/wiki/JavaScript) - Lenguaje secundario utilizado.
 * [Bootstrap](https://getbootstrap.com/) - Biblioteca utilizada.
 
 ## DESPLIEGUE ==> DESPLEGADA EN HEROKU
