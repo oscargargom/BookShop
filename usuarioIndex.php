@@ -1,10 +1,11 @@
 <?php
 
     session_start();
-
+    //Si el rol no está definido redirige a login.php
     if(!isset($_SESSION['rol'])){
         header('location: login.php');
     }else{
+        //Si el rol no es distinto o igual a 2, es decir, 1 o 2 (admin o usuario), redirige a login.php
         if($_SESSION['rol'] != 2){
             header('location: login.php');
         }
