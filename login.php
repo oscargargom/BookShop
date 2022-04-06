@@ -119,6 +119,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     </form>
 
+    <!-- Animaciones Login inputs -->
     <script type="text/javascript">
         $(".txtb input").on("focus", function() {
             $(this).addClass("focus");
