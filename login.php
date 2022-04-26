@@ -34,7 +34,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //Recibe los usuarios de la base de datos (Admin y usuario)
     $db = new Database();
-    $query = $db->connect()->prepare('SELECT * FROM usuarios WHERE username = :username AND password = :password');
+    $query = $db->connect()->prepare('SELECT username, password FROM usuarios WHERE username = :username AND password = :password');
     $query->execute(['username' => $username, 'password' => $password]);
 
     $row = $query->fetch(PDO::FETCH_NUM);
