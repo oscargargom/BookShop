@@ -1,5 +1,7 @@
 <?php
 
+    require_once 'funciones.php';
+
     session_start();
     //Si el rol no está definido redirige a login.php
     if(!isset($_SESSION['rol'])){
@@ -12,16 +14,11 @@
     }
 
 
+
+
+apertura();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
-</head>
-<body>
+
     <h1>Usuario Index</h1>
 
 
@@ -29,5 +26,6 @@
     <input type="submit" value="Cerrar Sesión" />
 </form>
 
-</body>
-</html>
+<?php 
+cierre();
+
