@@ -13,12 +13,12 @@ if (isset($_SESSION['rol'])) {
     switch ($_SESSION['rol']) {
         case 1:
             //Si el id rol es igual a 1 (admin), se envia al usuario a adminIndex.php
-            header('location: adminIndex.php');
+            header('location: index.php');
             break;
 
         case 2:
             //Si el id rol es igual a 2 (usuario), se envia al usuario a usuaroiIndex.php
-            header('location: usuarioIndex.php');
+            header('location: index.php');
             break;
 
         default:
@@ -45,11 +45,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $_SESSION['username'] = $username;
         switch ($rol) {
             case 1:
-                header('location: adminIndex.php');
+                header('location: index.php');
                 break;
 
             case 2:
-                header('location: usuarioIndex.php');
+                header('location: index.php');
                 break;
 
             default:
