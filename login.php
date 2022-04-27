@@ -90,7 +90,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <body>
 
     <form action="#" class="login-form" method="POST">
-        <img src="logo-removebg-preview.png" width="70" height="70" style="display:block; margin:auto;"> 
+        <img src="img/logo.png" width="70" height="70" style="display:block; margin:auto;"> 
 
         <h1>Garden of Books</h1>
 
