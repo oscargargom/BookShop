@@ -1,3 +1,11 @@
+
+<?php
+
+//Para que el css se vuelva a cargar, provisional
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+?>
+
 <?php
 include_once 'database.php';
 session_start();
@@ -63,12 +71,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 ?>
 
-<?php
 
-    //Para que el css se vuelva a cargar, provisional
-    header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-    header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
-?>
 
 
 
@@ -87,7 +90,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 <body>
 
     <form action="#" class="login-form" method="POST">
-        <h1>Inicia Sesión</h1>
+        <img src="logo-removebg-preview.png" width="70" height="70" style="display:block; margin:auto;"> 
+
+        <h1>Garden of Books</h1>
 
         <div class="txtb">
             <input type="text" name="username" required>
@@ -99,9 +104,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             <span data-placeholder="Contraseña"></span>
         </div>
 
-        <input type="submit" class="logbtn" value="Iniciar sesión">
+        <input type="submit" class="logbtn" value="Iniciar sesión" style="font-weight: bold;">
 
-        <div class="bottom-text" style="font-size: 15px;">
+        <div class="bottom-text" style="font-size: 15px; font-weight: bold">
             ¿No tienes cuenta? <a href="register.php">Regístrate</a>
         </div>
 
