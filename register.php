@@ -1,11 +1,11 @@
 <?php
 
-/*
+            include "config.php";
 
-            $servidor = "dwes.lan";
-            $nombreusuario = "root";
-            $password = "usuario";
-            $db = "tiendaLibros";
+            $servidor = $config->host;
+            $nombreusuario = $config->user;
+            $password = $config->password;
+            $db = $config->db;
         
             $conexion = new mysqli($servidor, $nombreusuario, $password, $db);
         
@@ -31,7 +31,7 @@
                 }
                 $conexion->close();
             }
-*/
+
 ?>
 
 <!DOCTYPE html>
