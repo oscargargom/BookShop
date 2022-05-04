@@ -1,6 +1,11 @@
 <?php include 'template/header.php' ?>
 
 <?php
+    if (!isset($_SESSION['rol'])) {
+        header('location: ../login.php');
+    } else if($_SESSION['rol']!=1){
+        header('location: ../login.php');
+    }
     include_once "model/conexion.php";
     $sentencia = $bd -> query("select * from items");
     $itemsLibros = $sentencia->fetchAll(PDO::FETCH_OBJ);

@@ -2,27 +2,9 @@
 include_once 'database.php';
 session_start();
 
-if (isset($_GET['cerrar_sesion'])) {
-    session_unset();
-
-    // Para destruir la sesión manualmente, provisional
-    session_destroy();
-}
 
 if (isset($_SESSION['rol'])) {
-    switch ($_SESSION['rol']) {
-        case 1:
-            //Si el id rol es igual a 1 (admin), se envia al usuario a adminIndex.php
-            header('location: index.php');
-            break;
-
-        case 2:
-            //Si el id rol es igual a 2 (usuario), se envia al usuario a usuaroiIndex.php
-            header('location: index.php');
-            break;
-
-        default:
-    }
+    header('location: index.php');
 }
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -43,17 +25,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         $_SESSION['rol'] = $rol;
         $_SESSION['username'] = $username;
-        switch ($rol) {
-            case 1:
-                header('location: index.php');
-                break;
-
-            case 2:
-                header('location: index.php');
-                break;
-
-            default:
-        }
+        
+        header('location: index.php');
     } else {
         // Si no existe el usuario introducido activa la alerta de bootstrap y añade un string a la variable alerta, para informar de los datos incorrectos
         $alerta1 = true;

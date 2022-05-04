@@ -2,8 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>CRUD php y mysql b5</title>
-    <!-- Required meta tags -->
+    <title>Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,6 +17,7 @@
 <body>
     <div>
         <?php
+        $sesionOn=0;
         include_once('../carritoCompra/layout/menu.php');
         ?>
     </div>
