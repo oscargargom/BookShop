@@ -1,6 +1,6 @@
-# TiendaLibros :deciduous_tree:
+# Garden of Books :deciduous_tree:
 
-_Descripción del proyecto_
+_Garden of Books es una web de compra de libros, que permite comprar, añadir nuevos, eliminar, o actualizar libros._
 
 ## Pre-requisitos 📋
 
