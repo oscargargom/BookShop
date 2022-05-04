@@ -31,7 +31,7 @@ bCarrito.addEventListener('click', (e) =>{
 });
 
 function actualizarCarritoUI(){
-    fetch('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/productos/api-productos.php?action=mostrar')
+    fetch('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/carrito/api-carrito.php?action=mostrar')
     .then(response =>{
         return response.json();
     })
@@ -81,7 +81,7 @@ botones.forEach(boton => {
 });
 
 const addItemToCarrito = id =>{
-    fetch('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/productos/api-productos.php?action=add&id=' + id)
+    fetch('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/carrito/api-carrito.php?action=add&id=' + id)
     .then(response =>{
         return response.text();
     })
@@ -91,7 +91,7 @@ const addItemToCarrito = id =>{
 };
 
 const removeItemFromCarrito = id =>{
-    fetch('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/productos/api-productos.php?action=remove&id=' + id)
+    fetch('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/carrito/api-carrito.php?action=remove&id=' + id)
     .then(res =>{
         return res.json();
     })
