@@ -5,7 +5,12 @@ body{
 }
 nav{
     background: black;
+    
 }
+a:hover{
+    color: #00916e;
+}
+
 nav ul{
     padding: 0;
     margin: 0;
@@ -13,7 +18,7 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
 }
 
 nav ul li a{
