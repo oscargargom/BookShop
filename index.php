@@ -7,7 +7,7 @@
     if(!isset($_SESSION['rol'])){
         header('location: login.php');
     }else{
-        
+        //Si el rol no es igual a admin o usuairo redirige a login.php
         if($_SESSION['rol'] != 1 && $_SESSION['rol'] != 2){
             header('location: login.php');
         }
