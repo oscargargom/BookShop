@@ -1,7 +1,7 @@
 <nav>
         <ul>
-            <li><a href="../index.php">Juguetes</a></li>
-            <li><a href="carritoCompra/libros.php">Libros</a></li>
+            <li><a href="http://dwes.lan/TiendaLibrosPrincipal/index.php">Juguetes</a></li>
+            <li><a href="http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/libros.php">Libros</a></li>
             <li class="carrito">
                 <a href="#" class='btn-carrito'>Carrito</a>
                 <div id="carrito-container">
