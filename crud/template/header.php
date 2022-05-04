@@ -17,7 +17,10 @@
 <body>
     <div>
         <?php
+        //Para que no se vuelva a iniciar la sesión (session_start)
         $sesionOn=0;
+        //Para que no se muestre el carrito en la ventana de Configuración
+        $carritoOn=0;
         include_once('../carritoCompra/layout/menu.php');
         ?>
     </div>

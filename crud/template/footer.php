@@ -1,10 +1,8 @@
 <footer class="container-fluid bg-dark fixed-bottom">
     <div class="row">
         <div class="col-md text-light text-center py-3">
-            Desarrollado por Oscar Garcia
-            <form action="../cerrarSesion.php" method="POST">
-                <input type="submit" value="Cerrar Sesión" />
-            </form>
+            Desarrollado por Oscar Garcia <br>
+            <button type="button" onclick="location.href='../cerrarSesion.php'" class="btn btn-success">Cerrar Sesión</button>
         </div>
     </div>
 </footer>

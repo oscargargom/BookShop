@@ -3,6 +3,7 @@ require_once 'funciones.php';
 
 session_start();
 $sesionOn = 1;
+$carritoOn = 1;
 
 //Si el rol no está definido redirige a login.php
 if (!isset($_SESSION['rol'])) {

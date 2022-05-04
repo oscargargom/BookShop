@@ -1,9 +1,9 @@
 <?php 
+    //Si la sesión ya está iniciada, no se vuelve a iniciar
     if($sesionOn!=1){
        session_start();  
     }
-   
-   
+
    ?>
 <nav>
         <ul>
@@ -14,13 +14,18 @@
             } 
             
             ?>
-            <li class="carrito">
-                <a href="#" class='btn-carrito'>Carrito</a>
-                <div id="carrito-container">
-                    <div id="tabla">
+            <?php
+            if($carritoOn==1){
+                echo "<li class='carrito'>
+                <a href='#' class='btn-carrito'>Carrito</a>
+                <div id='carrito-container'>
+                    <div id='tabla'>
 
                     </div>
                 </div>
-            </li>
+            </li>";
+            }
+            
+            ?>
         </ul>
 </nav>
