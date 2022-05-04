@@ -2,6 +2,7 @@
         <ul>
             <li><a href="http://dwes.lan/TiendaLibrosPrincipal/index.php">Juguetes</a></li>
             <li><a href="http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/libros.php">Libros</a></li>
+            <li><a href="http://dwes.lan/TiendaLibrosPrincipal/crud/configAdmin.php">Configuracion</a></li>
             <li class="carrito">
                 <a href="#" class='btn-carrito'>Carrito</a>
                 <div id="carrito-container">
@@ -11,4 +12,4 @@
                 </div>
             </li>
         </ul>
-    </nav>
+</nav>
