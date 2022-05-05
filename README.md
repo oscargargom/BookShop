@@ -11,7 +11,7 @@ Instalación:
 
 1#
 ```
-sudo apt update; 
+sudo apt update 
 ```
 2#
 ```

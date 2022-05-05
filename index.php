@@ -26,7 +26,7 @@ apertura();
 
     <main>
         <?php
-        $response = json_decode(file_get_contents('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/productos/api-productos.php?categoria=juguetes'), true);
+        $response = json_decode(file_get_contents('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/productos/api-productos.php?categoria=libros'), true);
         if ($response['statuscode'] == 200) {
             foreach ($response['items'] as $item) {
                 include('carritoCompra/layout/items.php');
@@ -46,12 +46,6 @@ apertura();
     </footer>
 
     <script src="carritoCompra/js/main.js"></script>
-</body>
-
-</html>
-
-
-
-
 
 <?php
+cierre();
