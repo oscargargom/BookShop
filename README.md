@@ -1,6 +1,6 @@
 # Garden of Books:deciduous_tree:
 
-_Garden of Books es una web de compra de libros, que permite comprar, añadir nuevos, eliminar, o actualizar libros._
+_Garden of Books es una web de compra de libros, que permite al usuario comprar, y al administrador añadir nuevos, eliminar, o actualizar libros._
 
 ## Pre-requisitos 📋
 
