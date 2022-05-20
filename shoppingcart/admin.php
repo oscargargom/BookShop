@@ -1,13 +1,10 @@
 <?php
 
 @include 'config.php';
-<<<<<<< HEAD
 
 session_start();
 
-=======
-//---
->>>>>>> 79062cccfd894cbf5fc8e56e4e165002be224e7e
+
 if (isset($_POST['add_product'])) {
    $p_name = $_POST['p_name'];
    $p_price = $_POST['p_price'];
