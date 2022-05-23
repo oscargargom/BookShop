@@ -2,6 +2,8 @@
 
 @include 'config.php';
 
+session_start();
+
 if (isset($_POST['add_product'])) {
    $p_name = $_POST['p_name'];
    $p_price = $_POST['p_price'];
@@ -122,8 +124,8 @@ if (isset($_POST['update_product'])) {
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['price']; ?>€</td>
                         <td>
-                           <a href="admin.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a>
-                           <a href="admin.php?edit=<?php echo $row['id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> update </a>
+                           <a href="admin.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('¿Estás seguro de que quieres borrar esto?');"> <i class="fas fa-trash"></i> Borrar </a>
+                           <a href="admin.php?edit=<?php echo $row['id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> Actualizar </a>
                         </td>
                      </tr>
 
@@ -155,8 +157,8 @@ if (isset($_POST['update_product'])) {
                      <input type="text" class="box" required name="update_p_name" value="<?php echo $fetch_edit['name']; ?>">
                      <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['price']; ?>">
                      <input type="file" class="box" required name="update_p_image" accept="image/png, image/jpg, image/jpeg">
-                     <input type="submit" value="update the prodcut" name="update_product" class="btn">
-                     <input type="reset" value="cancel" id="close-edit" class="option-btn">
+                     <input type="submit" value="Actualizar producto" name="update_product" class="btn">
+                     <input type="reset" value="Cancelar" id="close-edit" class="option-btn">
                   </form>
 
          <?php

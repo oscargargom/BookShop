@@ -2,6 +2,8 @@
 
 @include 'config.php';
 
+session_start();
+
 if(isset($_POST['order_btn'])){
 
    $name = $_POST['name'];
