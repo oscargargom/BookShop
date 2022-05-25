@@ -20,12 +20,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //Recibe los usuarios de la base de datos (Admin y usuario)
     $db = new Database();
-    $query = $db->connect()->prepare('SELECT username, password, rol_id FROM usuarios WHERE username = :username AND password = :password');
-    $query->execute(['username' => $username, 'password' => $password]);
+    $query = $db->connect()->prepare('SELECT username, password, rol_id FROM usuarios WHERE username = :username');
+    $query->execute(['username' => $username]);
 
     $row = $query->fetch();
     
-    if ($row == true) {
+    if (!empty($row) and password_verify($_POST['password'], $row['password'])) {
         $rol = $row['rol_id'];
 
         $_SESSION['rol'] = $rol;

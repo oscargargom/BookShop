@@ -16,9 +16,12 @@ if (isset($_POST['nombreCompleto'])) {
   $telefono = $_POST['telefono'];
   $password = $_POST['password'];
 
+  $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+
   $sql = "INSERT INTO usuarios(nombreCompleto, username, email, telefono, password, rol_id) 
                             
-                VALUES('$nombre', '$usuario', '$email', '$telefono', '$password', 2)";
+                VALUES('$nombre', '$usuario', '$email', '$telefono', '$passwordHash', 2)";
 
   if ($conn->query($sql) === true) {
     header('location: login.php');
