@@ -5,8 +5,14 @@
       <a href="#" class="logo">Garden of Books</a>
 
       <nav class="navbar">
-         <a href="pedidos.php">Pedidos</a>
-         <a href="admin.php">Añadir libros</a>
+         <?php
+
+         if($_SESSION['rol']==1){
+            echo "<a href='pedidos.php'>Pedidos</a>";
+            echo "<a href='admin.php'>Añadir libros</a>";
+         }
+         
+         ?>
          <a href="products.php">Libros</a>
       </nav>
 
