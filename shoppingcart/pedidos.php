@@ -84,9 +84,7 @@ session_start();
    </style>
    <footer>
       <div class="container-fluid">
-         <form method="POST">
-            <button type="button" onclick="location.href='../cerrarSesion.php'" class="btn btn-success">Cerrar Sesión</button>
-         </form>
+         
       </div>
    </footer>
    <!-- custom js file link  -->

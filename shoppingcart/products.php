@@ -98,9 +98,7 @@ if (isset($_POST['add_to_cart'])) {
    </div>
    <footer>
       <div class="container-fluid">
-         <form method="POST">
-            <button type="button" onclick="location.href='../cerrarSesion.php'" class="btn btn-success">Cerrar Sesión</button>
-         </form>
+         
       </div>
    </footer>
    <!-- custom js file link  -->
