@@ -1,6 +1,11 @@
 <?php
 
-require_once 'config.php';
+if (file_exists('../env.php')) {
+	include_once '../env.php';
+}
+
+include_once '../config.php';
+
 
 session_start();
 

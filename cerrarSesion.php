@@ -1,4 +1,6 @@
-<?php session_start();
+<?php 
+
+    session_start();
 
     //Cierra la sesión y redirige de vuelta al login.php
     session_destroy();

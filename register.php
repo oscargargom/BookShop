@@ -1,42 +1,45 @@
 <?php
+if (file_exists('env.php')) {
+  include_once 'env.php';
+}
 
-            include "config.php";
+include_once 'config.php';
 
-         
-        
-            if($conn->connect_error){
-                die("Conexión fallida: " . $conn->connect_error);
-            }
+if ($conn->connect_error) {
+  die("Conexión fallida: " . $conn->connect_error);
+}
 
-            if(isset($_POST['nombreCompleto'])){
-              $nombre = $_POST['nombreCompleto'];
-              $usuario = $_POST['username'];
-              $email = $_POST['email'];
-              $telefono = $_POST['telefono'];
-              $password = $_POST['password'];
-                
-                $sql = "INSERT INTO usuarios(nombreCompleto, username, email, telefono, password, rol_id) 
+if (isset($_POST['nombreCompleto'])) {
+  $nombre = $_POST['nombreCompleto'];
+  $usuario = $_POST['username'];
+  $email = $_POST['email'];
+  $telefono = $_POST['telefono'];
+  $password = $_POST['password'];
+
+  $sql = "INSERT INTO usuarios(nombreCompleto, username, email, telefono, password, rol_id) 
                             
                 VALUES('$nombre', '$usuario', '$email', '$telefono', '$password', 2)";
-                
-                if($conn->query($sql) === true){
-                  header('location: login.php');
-                }else{
-                    die("Error al insertar datos: " . $conn->error);
-                }
-                $conn->close();
-            }
+
+  if ($conn->query($sql) === true) {
+    header('location: login.php');
+  } else {
+    die("Error al insertar datos: " . $conn->error);
+  }
+  $conn->close();
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-    <link rel="stylesheet" href="css/styleRegister.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/styleRegister.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
   <div class="container">
     <div class="title">Registrarse</div>
@@ -74,7 +77,7 @@
         </div>
 
         <div class="bottom-text" style="text-align: center;"><br>
-            ¿Ya tienes cuenta? <a href="login.php">Inicia Sesión</a><br><br>
+          ¿Ya tienes cuenta? <a href="login.php">Inicia Sesión</a><br><br>
         </div>
 
 
@@ -83,4 +86,5 @@
   </div>
 
 </body>
+
 </html>
