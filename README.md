@@ -52,6 +52,7 @@ _Herramientas utilizadas._
 
 ## DESPLIEGUE ==> DESPLEGADA EN HEROKU
 
+[GARDEN_OF_BOOKS_HEROKU_CLICK_ME](https://gardenofbooks.herokuapp.com/)
 
 ## Autores ✒️
 
