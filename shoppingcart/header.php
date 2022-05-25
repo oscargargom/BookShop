@@ -2,6 +2,7 @@
 
    <div class="flex">
 
+      <img src="../img/logoBarra.png" width="40" height="40" style="margin-right: 1%;"> 
       <a href="#" class="logo">Garden of Books</a>
 
       <nav class="navbar">
@@ -26,6 +27,8 @@
       <a href="cart.php" class="cart">Carrito <span><?php echo $row_count; ?></span> </a>
 
       <div id="menu-btn" class="fas fa-bars"></div>
+
+      <a type="button" href='../cerrarSesion.php' class="cart">Cerrar Sesión</a>
 
    </div>
 
