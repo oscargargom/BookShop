@@ -67,11 +67,11 @@ if (isset($_POST['nombreCompleto'])) {
           </div>
           <div class="input-box">
             <span class="details">Contraseña</span>
-            <input type="text" placeholder="Enter your password" required name="password">
+            <input type="password" placeholder="Enter your password" required name="password">
           </div>
           <div class="input-box">
             <span class="details">Confirmar contraseña</span>
-            <input type="text" placeholder="Confirm your password" required>
+            <input type="password" placeholder="Confirm your password" required>
           </div>
         </div>
 
