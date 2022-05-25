@@ -2,15 +2,10 @@
 
             include "config.php";
 
-            $servidor = $config->host;
-            $nombreusuario = $config->user;
-            $password = $config->password;
-            $db = $config->db;
+         
         
-            $conexion = new mysqli($servidor, $nombreusuario, $password, $db);
-        
-            if($conexion->connect_error){
-                die("Conexión fallida: " . $conexion->connect_error);
+            if($conn->connect_error){
+                die("Conexión fallida: " . $conn->connect_error);
             }
 
             if(isset($_POST['nombreCompleto'])){
@@ -24,12 +19,12 @@
                             
                 VALUES('$nombre', '$usuario', '$email', '$telefono', '$password', 2)";
                 
-                if($conexion->query($sql) === true){
+                if($conn->query($sql) === true){
                   header('location: login.php');
                 }else{
-                    die("Error al insertar datos: " . $conexion->error);
+                    die("Error al insertar datos: " . $conn->error);
                 }
-                $conexion->close();
+                $conn->close();
             }
 
 ?>

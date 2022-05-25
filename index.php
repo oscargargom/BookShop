@@ -20,21 +20,10 @@ apertura();
 
 
 <body>
-    <?php
-    include_once('carritoCompra/layout/menu.php');
-    ?>
+
 
     <main>
-        <?php
-        $response = json_decode(file_get_contents('http://dwes.lan/TiendaLibrosPrincipal/carritoCompra/api/productos/api-productos.php?categoria=libros'), true);
-        if ($response['statuscode'] == 200) {
-            foreach ($response['items'] as $item) {
-                include('carritoCompra/layout/items.php');
-            }
-        } else {
-            echo $response['response'];
-        }
-        ?>
+  
 
     </main>
     <footer>

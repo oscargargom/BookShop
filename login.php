@@ -1,5 +1,10 @@
 <?php
-include_once 'database.php';
+
+if (file_exists('env.php')) {
+	include_once 'env.php';
+}
+
+include_once 'config.php';
 session_start();
 
 
