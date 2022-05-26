@@ -18,7 +18,7 @@
           <div class="border"></div>
           <p>Introduce tu email para obtener noticias y ofertas.</p>
           <form action="" class="newsletter-form">
-            <input type="text" class="txtb" placeholder="Enter Your Email">
+            <input type="text" class="txtb" placeholder="Introduce tu email">
             <input type="submit" class="btn" value="Enviar">
           </form>
         </div>
