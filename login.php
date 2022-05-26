@@ -9,7 +9,7 @@ session_start();
 
 
 if (isset($_SESSION['rol'])) {
-    header('location: shoppingcart/products.php');
+    header('location: index.php');
 }
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -31,7 +31,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $_SESSION['rol'] = $rol;
         $_SESSION['username'] = $username;
 
-        header('location: shoppingcart/products.php');
+        header('location: index.php');
     } else {
         // Si no existe el usuario introducido activa la alerta de bootstrap y añade un string a la variable alerta, para informar de los datos incorrectos
         $alerta1 = true;

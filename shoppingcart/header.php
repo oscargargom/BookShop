@@ -3,7 +3,7 @@
    <div class="flex">
 
       <img src="../img/logoBarra.png" width="40" height="40" style="margin-right: 1%;">
-      <a href="#" class="logo">Garden of Books</a>
+      <a href="../index.php" class="logo">Garden of Books</a>
 
       <nav class="navbar">
          <?php
@@ -15,7 +15,7 @@
          }
 
          ?>
-         <a href="products.php">Libros</a>
+         <a href="../index.php">Libros</a>
 
          <?php
 

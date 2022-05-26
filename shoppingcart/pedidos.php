@@ -23,7 +23,8 @@ session_start();
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+   <link rel="stylesheet" href="css/styleFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 </head>
@@ -72,21 +73,9 @@ session_start();
       </section>
 
    </div>
-   <style>
-       footer {
-           position: absolute;
-           bottom: 0;
-           width: 100%;
-           height: 40px;
 
-       }
-
-   </style>
-   <footer>
-      <div class="container-fluid">
-         
-      </div>
-   </footer>
+   
+   <?php include 'footer.php'; ?>
    <!-- custom js file link  -->
    <script src="js/script.js"></script>
 

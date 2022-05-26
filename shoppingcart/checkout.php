@@ -52,7 +52,7 @@ if(isset($_POST['order_btn'])){
             <p> Método de pago : <span>".$method."</span> </p>
             <p>(*pagar cuando el producto llega*)</p>
          </div>
-            <a href='products.php' class='btn'>continuar comprando</a>
+            <a href='../index.php' class='btn'>continuar comprando</a>
          </div>
       </div>
       ";
