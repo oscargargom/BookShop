@@ -45,12 +45,9 @@ session_start();
 <?php include 'header.php'; ?>
     
 <?php include 'formulario.php';    ?>
-   
 
 
-
-<?php include 'footer.php'; ?>
-   <!-- custom js file link  -->
+<div class="container">
    <script>
        function iniciarMap(){
     var coord = {lat:37.55293378997322 ,lng: -5.081764044766121};
@@ -64,7 +61,17 @@ session_start();
     });
 }
    </script>
-    <script src="{{ asset('scripts/script.js') }}"></script>
+<br><br><br>
+<h1>Localízanos</h1>
+<div id="map">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+    </div>
+</div>
+</div>
+<?php include 'footer.php'; ?>
+   
+
+<!-- custom js file link  -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
