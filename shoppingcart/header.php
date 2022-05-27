@@ -1,3 +1,4 @@
+
 <header class="header">
 
    <div class="flex">
@@ -6,6 +7,9 @@
       <a href="../index.php" class="logo">Garden of Books</a>
 
       <nav class="navbar">
+
+         <a href="../index.php">Libros</a>
+
          <?php
 
          //Muestra las secciones Pedidos y Añadir Libros solo si tu rol es 1, es decir, ADMIN
@@ -13,12 +17,11 @@
             echo "<a href='pedidos.php'>Pedidos</a>";
             echo "<a href='admin.php'>Añadir libros</a>";
          }
-
          ?>
-         <a href="../index.php">Libros</a>
+
+         <a href="contacto.php">Contáctanos</a>
 
          <?php
-
          //Cuenta los libros en el carrito para mostrar un numero al lado que corresponde a la cantidad de libros en el carrito
          $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
          $row_count = mysqli_num_rows($select_rows);

@@ -24,9 +24,10 @@ session_start();
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <link rel="stylesheet" href="css/styleFooter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/stylePedidos.css">
+   
 </head>
 
 <body>
@@ -51,11 +52,20 @@ session_start();
                   <form action="" method="post">
                      <div class="box">
                         
-                        <h3>Usuario: <?php echo $fetch_product['name']; ?></h3>
-                        <h3>Libros: <?php echo $fetch_product['total_products']; ?></h3>
-                        <h3>Precio Total: <?php echo $fetch_product['total_price']; ?>€</h3>
+                        <h3>ID PEDIDO:
+                        <span style="color: #787878"><?php echo $fetch_product['id']; ?></span>
+                           </h3>
+                        <h3>Usuario: 
+                        <span style="color: #787878"><?php echo $fetch_product['name']; ?></span>
+                        </h3>
+                        <h3>Libros: 
+                        <span style="color: #787878"><?php echo $fetch_product['total_products']; ?></span>
+                        </h3>
+                        <h3>Precio Total: 
+                           <span style="color: #787887"><?php echo $fetch_product['total_price']; ?>€</span>
+                        </h3>
 
-
+                        <input type="hidden" name="product_id" value="<?php echo $fetch_product['id']; ?>">
                         <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
                         <input type="hidden" name="product_total" value="<?php echo $fetch_product['total_products']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $fetch_product['total_price']; ?>">

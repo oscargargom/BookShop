@@ -179,14 +179,6 @@ if (isset($_POST['update_product'])) {
 
 
 
-   <footer>
-      <div class="container-fluid">
-         
-      </div>
-   </footer>
-
-
-
 
 
 
