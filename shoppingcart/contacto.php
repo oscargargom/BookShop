@@ -8,6 +8,10 @@ include_once '../config.php';
 
 session_start();
 
+if (!isset($_SESSION['rol'])) {
+    header('location: ../login.php');
+ }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

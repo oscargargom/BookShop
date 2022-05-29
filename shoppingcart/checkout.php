@@ -9,6 +9,10 @@ include_once '../config.php';
 
 session_start();
 
+if (!isset($_SESSION['rol'])) {
+   header('location: ../login.php');
+}
+
 if(isset($_POST['order_btn'])){
 
    $name = $_POST['name'];
