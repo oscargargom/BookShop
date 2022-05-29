@@ -117,15 +117,15 @@ if(isset($_POST['order_btn'])){
       <div class="flex">
          <div class="inputBox">
             <span>Tu nombre</span>
-            <input type="text" placeholder="enter your name" name="name" required>
+            <input type="text" placeholder="Introduce tu nombre" name="name" required>
          </div>
          <div class="inputBox">
             <span>Tu tlf</span>
-            <input type="number" placeholder="enter your number" name="number" required>
+            <input type="number" placeholder="Introduce tu numero" name="number" required>
          </div>
          <div class="inputBox">
             <span>Tu email</span>
-            <input type="email" placeholder="enter your email" name="email" required>
+            <input type="email" placeholder="Introduce tu email" name="email" required>
          </div>
          <div class="inputBox">
             <span>Metodo de pago</span>
@@ -136,28 +136,28 @@ if(isset($_POST['order_btn'])){
             </select>
          </div>
          <div class="inputBox">
-            <span>address line 1</span>
-            <input type="text" placeholder="e.g. flat no." name="flat" required>
+            <span>Dirección 1</span>
+            <input type="text" placeholder="Calle" name="flat" required>
          </div>
          <div class="inputBox">
-            <span>address line 2</span>
-            <input type="text" placeholder="e.g. street name" name="street" required>
+            <span>Dirección 2</span>
+            <input type="text" placeholder="Nº Casa/Piso" name="street" required>
          </div>
          <div class="inputBox">
             <span>Ciudad</span>
-            <input type="text" placeholder="e.g. mumbai" name="city" required>
+            <input type="text" placeholder="Ej: Carmona" name="city" required>
          </div>
          <div class="inputBox">
             <span>Provincia</span>
-            <input type="text" placeholder="e.g. maharashtra" name="state" required>
+            <input type="text" placeholder="Ej: Sevilla" name="state" required>
          </div>
          <div class="inputBox">
             <span>Pais</span>
-            <input type="text" placeholder="e.g. india" name="country" required>
+            <input type="text" placeholder="Ej: india" name="country" required>
          </div>
          <div class="inputBox">
             <span>Codigo postal</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" required>
+            <input type="text" placeholder="Ej: 123456" name="pin_code" required>
          </div>
       </div>
       <input type="submit" value="Completar" name="order_btn" class="btn">
