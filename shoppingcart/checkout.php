@@ -43,7 +43,7 @@ if(isset($_POST['order_btn'])){
       echo "
       <div class='order-message-container'>
       <div class='message-container'>
-         <h3>thank you for shopping!</h3>
+         <h3>¡Gracias por la compra!</h3>
          <div class='order-detail'>
             <span>".$total_product."</span>
             <span class='total'> total : ".$price_total."€  </span>
@@ -54,7 +54,7 @@ if(isset($_POST['order_btn'])){
             <p> Tu email : <span>".$email."</span> </p>
             <p> Tu direccion : <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
             <p> Método de pago : <span>".$method."</span> </p>
-            <p>(*pagar cuando el producto llega*)</p>
+            <p>(*Pagar cuando el producto llega*)</p>
          </div>
             <a href='../index.php' class='btn'>continuar comprando</a>
          </div>
