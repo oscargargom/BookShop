@@ -38,7 +38,3 @@ $conn = mysqli_connect($dbDsn, $dbUser, $dbPassword, $dbName);
         }
     
     }
-
-
-
-?>

@@ -1,7 +1,7 @@
 <?php
 
 if (file_exists('../env.php')) {
-	include_once '../env.php';
+   include_once '../env.php';
 }
 
 include_once '../config.php';
@@ -32,7 +32,7 @@ if (!isset($_SESSION['rol'])) {
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/stylePedidos.css">
-   
+
 </head>
 
 <body>
@@ -56,17 +56,17 @@ if (!isset($_SESSION['rol'])) {
 
                   <form action="" method="post">
                      <div class="box">
-                        
+
                         <h3>ID PEDIDO:
-                        <span style="color: #787878"><?php echo $fetch_product['id']; ?></span>
-                           </h3>
-                        <h3>Usuario: 
-                        <span style="color: #787878"><?php echo $fetch_product['name']; ?></span>
+                           <span style="color: #787878"><?php echo $fetch_product['id']; ?></span>
                         </h3>
-                        <h3>Libros: 
-                        <span style="color: #787878"><?php echo $fetch_product['total_products']; ?></span>
+                        <h3>Usuario:
+                           <span style="color: #787878"><?php echo $fetch_product['name']; ?></span>
                         </h3>
-                        <h3>Precio Total: 
+                        <h3>Libros:
+                           <span style="color: #787878"><?php echo $fetch_product['total_products']; ?></span>
+                        </h3>
+                        <h3>Precio Total:
                            <span style="color: #787887"><?php echo $fetch_product['total_price']; ?>€</span>
                         </h3>
 
@@ -74,7 +74,7 @@ if (!isset($_SESSION['rol'])) {
                         <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
                         <input type="hidden" name="product_total" value="<?php echo $fetch_product['total_products']; ?>">
                         <input type="hidden" name="product_price" value="<?php echo $fetch_product['total_price']; ?>">
-                        
+
                      </div>
                   </form>
 
@@ -89,7 +89,7 @@ if (!isset($_SESSION['rol'])) {
 
    </div>
 
-   
+
    <?php include 'footer.php'; ?>
    <!-- custom js file link  -->
    <script src="js/script.js"></script>

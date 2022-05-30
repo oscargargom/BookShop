@@ -1,7 +1,7 @@
 <div class="container" style="font-size: 150%">
 
-        <br><br>
-        <h1 class="heading">Formulario de contacto</h1>
+    <br><br>
+    <h1 class="heading">Formulario de contacto</h1>
     <form role="form" action="#" id="register-form" style="font-size: 150%">
         <div class="form-body" style="font-size: 150%">
             <div class="form-group mb-3">

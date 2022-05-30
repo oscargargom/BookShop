@@ -1,7 +1,7 @@
 <?php
 
 if (file_exists('env.php')) {
-	include_once 'env.php';
+   include_once 'env.php';
 }
 
 include_once 'config.php';
@@ -43,13 +43,13 @@ if (isset($_POST['add_to_cart'])) {
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Garden of books</title>
    <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="shoppingcart/css/styleFooter.css">
+   <link rel="stylesheet" href="shoppingcart/css/styleFooter.css">
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="shoppingcart/css/style.css">
-   
+
 
 </head>
 
@@ -65,48 +65,48 @@ if (isset($_POST['add_to_cart'])) {
 
    ?>
 
-<header class="header">
+   <header class="header">
 
-<div class="flex">
+      <div class="flex">
 
-   <img src="img/logoBarra.png" width="40" height="40" style="margin-right: 1%;">
-   <a href="index.php" class="logo">Garden of Books</a>
+         <img src="img/logoBarra.png" width="40" height="40" style="margin-right: 1%;">
+         <a href="index.php" class="logo">Garden of Books</a>
 
-   <nav class="navbar">
-
-
-      <a href="index.php">Libros</a>
-
-      <?php
-
-      //Muestra las secciones Pedidos y Añadir Libros solo si tu rol es 1, es decir, ADMIN
-      if ($_SESSION['rol'] == 1) {
-         echo "<a href='shoppingcart/pedidos.php'>Pedidos</a>";
-         echo "<a href='shoppingcart/admin.php'>Añadir libros</a>";
-      }
-
-      ?>
-      <a href="shoppingcart/contacto.php">Contáctanos</a>
-      <?php
-      //Cuenta los libros en el carrito para mostrar un numero al lado que corresponde a la cantidad de libros en el carrito
-      $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
-      $row_count = mysqli_num_rows($select_rows);
-
-      ?>
-
-      <a href="shoppingcart/cart.php" class="cart">Carrito <span><?php echo $row_count; ?></span> </a>
-
-      <a href='cerrarSesion.php' class="cart">Cerrar Sesión</a>
-
-   </nav>
-
-   <!-- menu desplegable para móviles-->
-   <div id="menu-btn" class="fas fa-bars"></div>
+         <nav class="navbar">
 
 
-</div>
+            <a href="index.php">Libros</a>
 
-</header>
+            <?php
+
+            //Muestra las secciones Pedidos y Añadir Libros solo si tu rol es 1, es decir, ADMIN
+            if ($_SESSION['rol'] == 1) {
+               echo "<a href='shoppingcart/pedidos.php'>Pedidos</a>";
+               echo "<a href='shoppingcart/admin.php'>Añadir libros</a>";
+            }
+
+            ?>
+            <a href="shoppingcart/contacto.php">Contáctanos</a>
+            <?php
+            //Cuenta los libros en el carrito para mostrar un numero al lado que corresponde a la cantidad de libros en el carrito
+            $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+            $row_count = mysqli_num_rows($select_rows);
+
+            ?>
+
+            <a href="shoppingcart/cart.php" class="cart">Carrito <span><?php echo $row_count; ?></span> </a>
+
+            <a href='cerrarSesion.php' class="cart">Cerrar Sesión</a>
+
+         </nav>
+
+         <!-- menu desplegable para móviles-->
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+
+      </div>
+
+   </header>
 
    <div class="container">
 
@@ -147,30 +147,30 @@ if (isset($_POST['add_to_cart'])) {
    </div>
    <footer>
       <div class="footer-container">
-        <div class="left-col">
-          <img src="img/logoBarra.png"  width="40" height="40" alt=""><span style="font-size: 190%">  Garden of Books</span>
-          
-          <div class="social-media">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <p class="rights-text">© 2022 Creado por Oscar García All Rights Reserved.</p>
-        </div>
+         <div class="left-col">
+            <img src="img/logoBarra.png" width="40" height="40" alt=""><span style="font-size: 190%"> Garden of Books</span>
 
-        <div class="right-col">
-          <h1>Boletín Informativo</h1>
-          <div class="border"></div>
-          <p>Introduce tu email para obtener noticias y ofertas.</p>
-          <form action="" class="newsletter-form">
-            <input type="text" class="txtb" placeholder="Introduce tu email">
-            <input type="submit" class="btn" value="Enviar">
-          </form>
-        </div>
+            <div class="social-media">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-youtube"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="rights-text">© 2022 Creado por Oscar García All Rights Reserved.</p>
+         </div>
+
+         <div class="right-col">
+            <h1>Boletín Informativo</h1>
+            <div class="border"></div>
+            <p>Introduce tu email para obtener noticias y ofertas.</p>
+            <form action="" class="newsletter-form">
+               <input type="text" class="txtb" placeholder="Introduce tu email">
+               <input type="submit" class="btn" value="Enviar">
+            </form>
+         </div>
       </div>
-</footer>
+   </footer>
    <!-- custom js file link  -->
    <script src="shoppingcart/js/script.js"></script>
 

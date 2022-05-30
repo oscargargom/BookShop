@@ -1,7 +1,7 @@
 <?php
 
 if (file_exists('../env.php')) {
-	include_once '../env.php';
+   include_once '../env.php';
 }
 
 include_once '../config.php';
@@ -13,22 +13,22 @@ if (!isset($_SESSION['rol'])) {
    header('location: ../login.php');
 }
 
-if(isset($_POST['update_update_btn'])){
+if (isset($_POST['update_update_btn'])) {
    $update_value = $_POST['update_quantity'];
    $update_id = $_POST['update_quantity_id'];
    $update_quantity_query = mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_value' WHERE id = '$update_id'");
-   if($update_quantity_query){
+   if ($update_quantity_query) {
       header('location:cart.php');
    };
 };
 
-if(isset($_GET['remove'])){
+if (isset($_GET['remove'])) {
    $remove_id = $_GET['remove'];
    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
    header('location:cart.php');
 };
 
-if(isset($_GET['delete_all'])){
+if (isset($_GET['delete_all'])) {
    mysqli_query($conn, "DELETE FROM `cart`");
    header('location:cart.php');
 }
@@ -37,6 +37,7 @@ if(isset($_GET['delete_all'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,77 +52,79 @@ if(isset($_GET['delete_all'])){
    <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
-<?php include 'header.php'; ?>
+   <?php include 'header.php'; ?>
 
-<div class="container">
+   <div class="container">
 
-<section class="shopping-cart">
+      <section class="shopping-cart">
 
-   <h1 class="heading">Carrito de compra</h1>
+         <h1 class="heading">Carrito de compra</h1>
 
-   <table>
+         <table>
 
-      <thead>
-         <th>Imagen</th>
-         <th>Nombre</th>
-         <th>Precio</th>
-         <th>Cantidad</th>
-         <th>Precio total</th>
-         <th>Acciones</th>
-      </thead>
+            <thead>
+               <th>Imagen</th>
+               <th>Nombre</th>
+               <th>Precio</th>
+               <th>Cantidad</th>
+               <th>Precio total</th>
+               <th>Acciones</th>
+            </thead>
 
-      <tbody>
+            <tbody>
 
-         <?php 
-         
-         $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
-         $grand_total = 0;
-         if(mysqli_num_rows($select_cart) > 0){
-            while($fetch_cart = mysqli_fetch_assoc($select_cart)){
-         ?>
+               <?php
 
-         <tr>
-            <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
-            <td><?php echo $fetch_cart['name']; ?></td>
-            <td><?php echo number_format($fetch_cart['price']); ?>€</td>
-            <td>
-               <form action="" method="post">
-                  <input type="hidden" name="update_quantity_id"  value="<?php echo $fetch_cart['id']; ?>" >
-                  <input type="number" name="update_quantity" min="1"  value="<?php echo $fetch_cart['quantity']; ?>" >
-                  <input type="submit" value="update" name="update_update_btn">
-               </form>   
-            </td>
-            <td><?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?>€</td>
-            <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Eliminar libro del carrito?')" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar</a></td>
-         </tr>
-         <?php
-           $grand_total += $sub_total;  
-            };
-         };
-         ?>
-         <tr class="table-bottom">
-            <td><a href="../index.php" class="option-btn" style="margin-top: 0;">continuar comprando</a></td>
-            <td colspan="3">Total</td>
-            <td><?php echo $grand_total; ?>€</td>
-            <td><a href="cart.php?delete_all" onclick="return confirm('¿Estás seguro que quieres borrarlo todo?');" class="delete-btn"> <i class="fas fa-trash"></i> Borrar todo </a></td>
-         </tr>
+               $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
+               $grand_total = 0;
+               if (mysqli_num_rows($select_cart) > 0) {
+                  while ($fetch_cart = mysqli_fetch_assoc($select_cart)) {
+               ?>
 
-      </tbody>
+                     <tr>
+                        <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+                        <td><?php echo $fetch_cart['name']; ?></td>
+                        <td><?php echo number_format($fetch_cart['price']); ?>€</td>
+                        <td>
+                           <form action="" method="post">
+                              <input type="hidden" name="update_quantity_id" value="<?php echo $fetch_cart['id']; ?>">
+                              <input type="number" name="update_quantity" min="1" value="<?php echo $fetch_cart['quantity']; ?>">
+                              <input type="submit" value="update" name="update_update_btn">
+                           </form>
+                        </td>
+                        <td><?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?>€</td>
+                        <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('¿Eliminar libro del carrito?')" class="delete-btn"> <i class="fas fa-trash"></i> Eliminar</a></td>
+                     </tr>
+               <?php
+                     $grand_total += $sub_total;
+                  };
+               };
+               ?>
+               <tr class="table-bottom">
+                  <td><a href="../index.php" class="option-btn" style="margin-top: 0;">continuar comprando</a></td>
+                  <td colspan="3">Total</td>
+                  <td><?php echo $grand_total; ?>€</td>
+                  <td><a href="cart.php?delete_all" onclick="return confirm('¿Estás seguro que quieres borrarlo todo?');" class="delete-btn"> <i class="fas fa-trash"></i> Borrar todo </a></td>
+               </tr>
 
-   </table>
+            </tbody>
 
-   <div class="checkout-btn">
-      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">Proceder al pago</a>
+         </table>
+
+         <div class="checkout-btn">
+            <a href="checkout.php" class="btn <?= ($grand_total > 1) ? '' : 'disabled'; ?>">Proceder al pago</a>
+         </div>
+
+      </section>
+
    </div>
 
-</section>
-
-</div>
-   
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
 
 </body>
+
 </html>
