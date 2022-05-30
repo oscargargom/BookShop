@@ -17,16 +17,20 @@ if (!isset($_SESSION['rol'])) {
 
 if (isset($_POST['add_to_cart'])) {
 
+   
    $product_name = $_POST['product_name'];
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];
    $product_quantity = 1;
 
+   //Hace un select de los libros en el carrito
    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
 
+   //Si el libro que se ha seleccionado ya estaba en el select anteriormente hecho, se notifica al usuario que ha ya sido añadido
    if (mysqli_num_rows($select_cart) > 0) {
       $message[] = 'El libro ya ha sido añadido al carrito';
    } else {
+      //Si no habia sido añadido antes, se inserta dentro del carrito
       $insert_product = mysqli_query($conn, "INSERT INTO `cart`(name, price, image, quantity) VALUES('$product_name', '$product_price', '$product_image', '$product_quantity')");
       $message[] = 'Libro añadido al carrito correctamente';
    }
@@ -118,7 +122,9 @@ if (isset($_POST['add_to_cart'])) {
 
             <?php
 
+            //Para mostrar los libros se hace un select de los productos
             $select_products = mysqli_query($conn, "SELECT * FROM `products`");
+            //Si la cantidad de libros del select es mayor a cero, se muestran en pantalla
             if (mysqli_num_rows($select_products) > 0) {
                while ($fetch_product = mysqli_fetch_assoc($select_products)) {
             ?>

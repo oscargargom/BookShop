@@ -26,6 +26,7 @@ if (isset($_POST['order_btn'])) {
    $country = $_POST['country'];
    $pin_code = $_POST['pin_code'];
 
+   //Hace un select de todo lo añadido al carrito
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
    $price_total = 0;
    if (mysqli_num_rows($cart_query) > 0) {
@@ -35,10 +36,12 @@ if (isset($_POST['order_btn'])) {
          $price_total += $product_price;
       };
    };
-
+   //Una vez el usuario introduce los datos se insertan dentro de la tabla ordendes, para ser mostrado posteriormente en pedidos
    $total_product = implode(', ', $product_name);
    $detail_query = mysqli_query($conn, "INSERT INTO `ordenes`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
 
+
+   //Al completar la compra se crea una pequeña ventana para mostra la confirmación
    if ($cart_query && $detail_query) {
       echo "
       <div class='order-message-container'>

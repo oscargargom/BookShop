@@ -16,13 +16,16 @@ if (isset($_POST['nombreCompleto'])) {
   $telefono = $_POST['telefono'];
   $password = $_POST['password'];
 
+
+  //Contraseña cifrada
   $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-
+  //Insertar datos introducidos e el formulario en la tabla usuarios
   $sql = "INSERT INTO usuarios(nombreCompleto, username, email, telefono, password, rol_id) 
                             
                 VALUES('$nombre', '$usuario', '$email', '$telefono', '$passwordHash', 2)";
-
+  
+  //si la conexión se hace correctamente devuelve al login para iniciar sesión
   if ($conn->query($sql) === true) {
     header('location: login.php');
   } else {

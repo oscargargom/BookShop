@@ -5,6 +5,7 @@ $dbUser = getenv('DB_USER');
 $dbPassword = getenv('DB_PASSWORD');
 $dbName = getenv('DB_NAME');
 
+//Conexión base de datos
 $conn = mysqli_connect($dbDsn, $dbUser, $dbPassword, $dbName);
 
     class Database{

@@ -10,6 +10,7 @@ include_once '../config.php';
 
 session_start();
 
+//Si la sesión no existe redirige de vuelta al login, esto hace que nadie pueda entrar sin estar logeado
 if (!isset($_SESSION['rol'])) {
    header('location: ../login.php');
 }

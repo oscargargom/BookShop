@@ -55,6 +55,7 @@ if (!isset($_SESSION['rol'])) {
 
     <div class="container">
         <script>
+            //funcion para establecer las coordenadas del mapa
             function iniciarMap() {
                 var coord = {
                     lat: 37.55293378997322,
@@ -72,6 +73,7 @@ if (!isset($_SESSION['rol'])) {
         </script>
         <br><br><br>
         <h1>Localízanos</h1>
+        <!-- DIV del mapa, para mostrarlo-->
         <div id="map">
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
         </div>

@@ -12,7 +12,7 @@ session_start();
 if (!isset($_SESSION['rol'])) {
    header('location: ../login.php');
 }
-
+//Si el botón de update se pulsa, se actualiza la cantidad definida en el botón
 if (isset($_POST['update_update_btn'])) {
    $update_value = $_POST['update_quantity'];
    $update_id = $_POST['update_quantity_id'];
@@ -22,12 +22,14 @@ if (isset($_POST['update_update_btn'])) {
    };
 };
 
+//Para eliminar los libros se hace un delete del id seleccionado
 if (isset($_GET['remove'])) {
    $remove_id = $_GET['remove'];
    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
    header('location:cart.php');
 };
 
+//Para eliminar todods los libros
 if (isset($_GET['delete_all'])) {
    mysqli_query($conn, "DELETE FROM `cart`");
    header('location:cart.php');
