@@ -1,9 +1,10 @@
 <?php
-
+//Base de datos para que funcione en heroku
 if (file_exists('env.php')) {
    include_once 'env.php';
 }
 
+//Base de datos
 include_once 'config.php';
 
 
